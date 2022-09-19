@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>select and input</h1>
+    <select name="" id="input">
+        <option value="select" id="name">select</option>
+        <option value="open" id="open">open</option>
+        <option value="close" id="close">close</option>
+    </select>
+    <button onclick="btn()" id="enter">enter</button>
+    <h2 id="h2"></h2>
+
+
+    <button onclick="enter()">enter</button>
+    <p id="p"></p>
+    <br><br>
+    <h1 id="big"></h1>
+
+    <h1 id="date"></h1>
+    <button onclick="myfun()">what is day today</button>
+
+    <script>
+    
+       function btn(){
+            let input=document.getElementById("input")
+            let select=document.getElementById("name");
+            let open=document.getElementById("open");
+            let close=document.getElementById("close");
+
+            
+            let h2=document.getElementById("h2");
+            if(input.value=="open"){
+
+                h2.innerText="opened";
+            }else if(input.value=="close"){
+                h2.innerText="closed";
+            }else{
+                h2.innerText="";
+            }
+        }
+
+        //which day today
+
+        function myfun(){
+            let a;
+            let day=document.getElementById("date");
+            // let date=new Date();
+            //     date.getDay();
+            
+            switch(new Date().getDay()){
+                case 0:
+                a="sunday";
+                break;
+                case 1:
+                    a="monday";
+                    break;
+                case 2:
+                    a="tuesday"
+                    break;
+                 case 3:
+                    a="wednesday";
+                    break;
+                case 4:
+                    a="thursday";
+                    break;
+                case 5:
+                    a="friday;"
+                    break;
+                case 6:
+                    a="saturday";
+                    break;
+            }
+            day.innerText=a;
+        }
+
+             //for in loop
+        // const name=["sakthi","mugesh","mani","ramesh"]
+
+        // for(let i in name){
+        //     console.log(name[i])
+        // }
+
+            
+            //         let name="sakthimuthiselvan";
+
+            // for(let i in name){
+            //     console.log(name[i])
+            // }
+
+
+
+            //for of loop
+
+            const number=[1,5,8,9,23,56,7,87];
+
+            for(let i of number){
+                console.log(i)
+            }
+
+            let name="askthimuthuselvan";
+
+            for(let i of name){
+                console.log(i)
+            }
+
+        //if condition
+
+        // function enter(){
+        //     let p=document.getElementById("p");
+
+        //     a=new Date();
+        //         a.getHours()
+        //         if(a>4 && a<9){
+        //             p.innertext="good morning";
+        //         }else if(a>18 && a>22){
+        //             p.innerText="good night";
+        //         } else{
+        //             p.innerText="have a good day";
+        //         }
+        // }
+
+
+
+                //which is largere number 
+
+        // var a=10, b=2, c=4,total;
+        // big=document.getElementById("big");
+        // if(a>b){
+        //     if(b>c){
+        //         total=b;
+        //     }else if(c>a){
+        //         total=c;
+        //     }else{
+        //         total=a;
+        //     }
+        // }else{
+        //     if(b>c){
+        //         total=b;
+        //     }else{
+        //         total=c;
+        //     }
+        // }
+       
+        // big.innerText=total;
+    </script>
+</body>
+</html>
